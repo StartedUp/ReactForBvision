@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BVision</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="LandingPageComponents.jsx" type ="text/jsx"></script>
+    <style type="text/css">
+        h1{
+            text-align: center;
+        }
+        .block{
+    height:40px;
+    background:black;
+    color:#fff;
+    position:relative;
+    width:100px;
+    text-align:center;
+    line-height:36px;
+}
+.block:after{
+    content:"";
+    position:absolute;
+    height:0;
+    width:0;
+    left:100%;
+    top:0;
+    border:20px dotted transparent;
+    border-left: 20px dotted black;
+}
+    </style>
+</head>
+    <div id="LandingPage" class="container"></div>
+
+    <script type="text/jsx">
+    var style = {color: 'green'};
+        React.render(
+                <div>
+                    <h1 style={style}>Your life back with one call</h1>
+                    <ul className="nav nav-tabs nav-justified">
+                    <Tab TabName="Getting started" />
+                    <Tab TabName="Make a claim" />
+                    </ul>
+                    <div className="tab-content">
+                        <div id="Getting_started" className="tab-pane fade" >
+                          <h3>LandingPage</h3>
+                          <p>Your life back with one call</p>
+                        </div>
+                        <div id="Make_a_claim" className="tab-pane fade">
+                          <div id="arrow" className="block" style={{float:"left",position:"fixed"}}>Make a claim</div>
+                          <form role="form" style={{marginLeft: "130px"}} >
+                            <RadioButton radioName = "New Claim" />
+                            <RadioButton radioName = "Reuse Claim" />
+                            </form>
+                            <br/>
+                            <br/>
+                            <p><strong> What can claim for?  |  Terms and conditions.</strong></p>
+                        <p>If you bought insurance with us before 2014, find out how to make a claim on our older insurance <a href=""><strong>here</strong></a></p>
+                        </div>
+                    </div>
+                    
+                </div>,
+            document.getElementById('LandingPage')
+        );
+    </script>
+  </body>
+</html>
