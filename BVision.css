@@ -1,0 +1,36 @@
+h1{
+  text-align: center;
+}
+.block{
+    height:40px;
+    background:black;
+    color:#fff;
+    position:relative;
+    width:100px;
+    text-align:center;
+    line-height:36px;
+}
+.block:after{
+    content:"";
+    position:absolute;
+    height:0;
+    width:0;
+    left:100%;
+    top:0;
+    border:20px dotted transparent;
+    border-left: 20px dotted black;
+}
+#title{
+    color: green;
+}
+.nextBtn{
+    background-color: #93CD59;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    width: 150px;
+    height: 25px
+}

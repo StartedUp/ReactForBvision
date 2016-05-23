@@ -3,56 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>BVision</title>
+   <!-- React CDN  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+    <!-- Boostrap CDN -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <!-- Supporting Files -->
     <script src="LandingPageComponents.jsx" type ="text/jsx"></script>
-    <style type="text/css">
-        h1{
-            text-align: center;
-        }
-        .block{
-    height:40px;
-    background:black;
-    color:#fff;
-    position:relative;
-    width:100px;
-    text-align:center;
-    line-height:36px;
-}
-.block:after{
-    content:"";
-    position:absolute;
-    height:0;
-    width:0;
-    left:100%;
-    top:0;
-    border:20px dotted transparent;
-    border-left: 20px dotted black;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="BVision.css">
+
 </head>
 <body>
     <div id="LandingPage" class="container"></div>
     <script type="text/javascript">
-    function nextPage () {
-      if(document.getElementById('New Claim').checked) {
-        window.open("NewClaim.html",_self );
-      }else if(document.getElementById('Reuse Claim').checked) {
-        window.open("ReuseClaim.html",_self );
-      }
-    }
     </script>
     <script type="text/jsx">
-    var style = {color: 'green'};
         React.render(
                 <div>
-                    <h1 style={style}>Your life back with one call</h1>
+                    <h1 id="title">Your life back with one call</h1>
                     <ul className="nav nav-tabs nav-justified">
                     <Tab TabName="Getting started" />
                     <Tab TabName="Make a claim" />
@@ -71,7 +44,7 @@
                           <br/>
                           <p><strong> What can claim for?  |  Terms and conditions.</strong></p>
                           <p>If you bought insurance with us before 2014, find out how to make a claim on our older insurance <a href=""><strong>here</strong></a></p>
-                           <Buton Bname="Next" />
+                           <Buton id="homePageBtn" Bname="Next" />
                           </form>
                         </div>
                     </div>
